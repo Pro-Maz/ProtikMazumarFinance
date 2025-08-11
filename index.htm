@@ -208,10 +208,22 @@
 <header>
     <h1>Protik Mazumdar</h1>
     <p>Financial Analyst | CPFE | FMVA | M&A | Valuation</p>
- <a href="Protik_Mazumdar_Resume.pdf" class="resume-btn" download>
+<a id="resumeLink" class="resume-btn">
 📄 Download Resume
 </a>
-</header>
+
+<script>
+const resumePagesURL = "Protik_Mazumdar_Resume.pdf"; 
+const resumeGitHubRaw = "https://github.com/Pro-Maz/ProtikMazumarFinance/raw/main/Protik_Mazumdar_Resume.pdf";
+
+// Detect if on GitHub Pages
+if (window.location.hostname.includes("github.io")) {
+    document.getElementById("resumeLink").href = resumePagesURL;
+    document.getElementById("resumeLink").setAttribute("download", "");
+} else {
+    document.getElementById("resumeLink").href = resumeGitHubRaw;
+}
+</script>
 
 <main>
     <!-- About Me -->
@@ -408,5 +420,6 @@
 
 </body>
 </html>
+
 
 
