@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Protik Mazumdar | Financial Analyst Portfolio</title>
+<style>
+    :root {
+        --primary: #1e2a38; /* Navy */
+        --secondary: #b0c4de; /* Light Steel Blue */
+        --highlight: #f4b400; /* Gold accent */
+        --bg: #f4f6f8;
+        --card-bg: #ffffff;
+    }
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: var(--bg);
+        color: #333;
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+    header {
+        background-color: var(--primary);
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    header h1 {
+        font-size: 2.8rem;
+        margin-bottom: 0.3rem;
+    }
+    header p {
+        color: var(--secondary);
+        font-size: 1.2rem;
+    }
+    .resume-btn {
+        display: inline-block;
+        background-color: var(--highlight);
+        color: var(--primary);
+        padding: 0.6rem 1.2rem;
+        border-radius: 30px;
+        font-weight: bold;
+        margin-top: 1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .resume-btn:hover {
+        background-color: #d89c00;
+        color: white;
+    }
+    main {
+        max-width: 1100px;
+        margin: auto;
+        padding: 2rem 1rem;
+        position: relative;
+        z-index: 1;
+    }
+    section {
+        margin-bottom: 3rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+        color: var(--primary);
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: var(--highlight);
+        border-radius: 2px;
+    }
+    ul {
+        padding-left: 20px;
+    }
+    /* Core Competencies Grid */
+    .core-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+    .core-grid div {
+        background: #ffffff;
+        padding: 0.8rem 1rem;
+        border-left: 4px solid var(--highlight);
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    /* Stats Counters */
+    .stats {
+        display: flex;
+        justify-content: space-around;
+        margin: 3rem 0;
+        text-align: center;
+    }
+    .stat-box h3 {
+        font-size: 2.5rem;
+        color: var(--highlight);
+        margin: 0;
+    }
+    .stat-box p {
+        color: var(--primary);
+        font-weight: bold;
+    }
+    @media (max-width: 768px) {
+        .stats {
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+    /* Carousel */
+    .carousel-container {
+        position: relative;
+        overflow: hidden;
+    }
+    .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease;
+        gap: 1.5rem;
+    }
+    .project-card {
+        flex: 0 0 300px;
+        background-color: var(--card-bg);
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        border-top: 4px solid var(--highlight);
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .project-card h3 {
+        color: var(--primary);
+        margin-top: 0;
+    }
+    .tools {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 0.5rem;
+    }
+    a {
+        color: var(--highlight);
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    a:hover {
+        color: #d89c00;
+    }
+    /* Carousel Arrows */
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        z-index: 2;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+    }
+    .carousel-btn:hover {
+        opacity: 1;
+    }
+    .prev-btn {
+        left: -20px;
+    }
+    .next-btn {
+        right: -20px;
+    }
+    footer {
+        background-color: var(--primary);
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        margin-top: 2rem;
+    }
+    /* Finance Background */
+    .finance-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 400px;
+        z-index: 0;
+        opacity: 0.15;
+        pointer-events: none;
+    }
+</style>
+</head>
+<body>
+
+<canvas class="finance-bg"></canvas>
+
+<header>
+    <h1>Protik Mazumdar</h1>
+    <p>Financial Analyst | CPFE | FMVA | M&A | Valuation</p>
+ <a href="https://your-username.github.io/your-repo-name/Protik_Mazumdar_Resume.pdf" 
+   class="resume-btn" download>
+📄 Download Resume
+</a>
+</header>
+
+<main>
+    <!-- About Me -->
+    <section>
+        <h2>About Me</h2>
+        <p>Results-driven Financial Analyst with expertise in private equity, venture capital, and M&A. 
+        Skilled in financial modelling, valuation, market research, and investor relations. 
+        Adept at simplifying complex financial data for stakeholders and delivering actionable insights to 
+        optimize investment strategies.</p>
+    </section>
+
+    <!-- Core Competencies -->
+    <section>
+        <h2>Core Competencies</h2>
+        <div class="core-grid">
+            <div>Financial Modeling & Valuation (DCF, SOTP, Trading/Transaction Comps, 409A)</div>
+            <div>Investment Research & Analysis</div>
+            <div>Mergers & Acquisitions Execution</div>
+            <div>Strategic Financial Planning</div>
+            <div>Market Trend Analysis</div>
+            <div>Investor Outreach & Presentation Development</div>
+            <div>Tools: JPX, EDGAR, DART, Bloomberg, CapIQ</div>
+        </div>
+    </section>
+
+    <!-- Stats Counters -->
+    <section class="stats">
+        <div class="stat-box">
+            <h3 class="counter" data-target="100">0</h3>
+            <p>₹ Cr in Deals Executed</p>
+        </div>
+        <div class="stat-box">
+            <h3 class="counter" data-target="3">0</h3>
+            <p>Years of Experience</p>
+        </div>
+        <div class="stat-box">
+            <h3 class="counter" data-target="50">0</h3>
+            <p>Financial Models Built</p>
+        </div>
+    </section>
+
+    <!-- Projects with Carousel -->
+    <section>
+        <h2>Projects</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <div class="carousel-track" id="carouselTrack">
+                <div class="project-card">
+                    <h3>M&A Valuation Models</h3>
+                    <p>DCF, comparables, and precedent transaction models for multiple sectors.</p>
+                    <div class="tools">Excel, Python, Bloomberg</div>
+                    <p><a href="#">View Project</a></p>
+                </div>
+                <div class="project-card">
+                    <h3>TMT Industry Financial Research</h3>
+                    <p>Comprehensive financial and market analysis for SaaS and TMT companies.</p>
+                    <div class="tools">Power BI, CapIQ, EDGAR</div>
+                    <p><a href="#">View Project</a></p>
+                </div>
+                <div class="project-card">
+                    <h3>Risk Assessment Dashboards</h3>
+                    <p>Interactive dashboards for financial risks and compliance metrics.</p>
+                    <div class="tools">Power BI, SQL</div>
+                    <p><a href="#">View Project</a></p>
+                </div>
+                <div class="project-card">
+                    <h3>Private Equity Deal Research</h3>
+                    <p>In-depth research for private equity deals in Southeast Asia.</p>
+                    <div class="tools">Bloomberg, CapIQ</div>
+                    <p><a href="#">View Project</a></p>
+                </div>
+            </div>
+            <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section>
+        <h2>Experience</h2>
+        <h3>Analyst – Mergers & Acquisitions | AKMV Consultants Pvt Ltd</h3>
+        <p>Executed transactions across multiple sectors including BPC, travel, and agri-tech drones.</p>
+        <h3>Financial Analyst – TMT Industry | Professional Mantra Pvt Ltd</h3>
+        <p>Developed financial models and produced in-depth research for SaaS and TMT companies.</p>
+        <h3>Financial Analyst Intern | MedTourEasy</h3>
+        <p>Built operating and financial models for target companies in medical tourism.</p>
+    </section>
+
+    <!-- Contact -->
+    <section>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:mazprotik@gmail.com">mazprotik@gmail.com</a></p>
+        <p>Phone: +91 9999603558</p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/protikmazumdar</a></p>
+    </section>
+</main>
+
+<footer>
+    &copy; 2025 Protik Mazumdar | Financial Analyst Portfolio
+</footer>
+
+<script>
+    // Carousel Functionality
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let index = 0;
+    const cardWidth = 330;
+    nextBtn.addEventListener('click', () => {
+        if (index < track.children.length - 1) {
+            index++;
+            track.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+    });
+    prevBtn.addEventListener('click', () => {
+        if (index > 0) {
+            index--;
+            track.style.transform = `translateX(-${index * cardWidth}px)`;
+        }
+    });
+
+    // Stats Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 100;
+    let started = false;
+    window.addEventListener('scroll', () => {
+        const statsSection = document.querySelector('.stats');
+        const sectionPos = statsSection.getBoundingClientRect().top;
+        const screenPos = window.innerHeight / 1.2;
+        if (sectionPos < screenPos && !started) {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+            started = true;
+        }
+    });
+
+    // Finance chart animation
+    const canvasBG = document.querySelector('.finance-bg');
+    const ctx = canvasBG.getContext('2d');
+    function resizeCanvas() {
+        canvasBG.width = window.innerWidth;
+        canvasBG.height = 400;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    function drawChart() {
+        ctx.clearRect(0, 0, canvasBG.width, canvasBG.height);
+        ctx.strokeStyle = '#ffffff22';
+        ctx.lineWidth = 1;
+        const gridSize = 50;
+        for (let x = 0; x < canvasBG.width; x += gridSize) {
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, canvasBG.height);
+            ctx.stroke();
+        }
+        for (let y = 0; y < canvasBG.height; y += gridSize) {
+            ctx.beginPath();
+            ctx.moveTo(0, y);
+            ctx.lineTo(canvasBG.width, y);
+            ctx.stroke();
+        }
+        const lines = 3;
+        for (let l = 0; l < lines; l++) {
+            ctx.beginPath();
+            let volatility = 30 + l * 10;
+            let offset = (Date.now() / (100 + l * 50)) % 200;
+            ctx.moveTo(0, canvasBG.height / 2);
+            for (let x = 0; x <= canvasBG.width; x += 10) {
+                const y = canvasBG.height / 2 +
+                    Math.sin((x + offset) / (40 - l * 5)) * volatility +
+                    Math.sin((x + offset) / (15 + l * 3)) * (volatility / 3);
+                ctx.lineTo(x, y);
+            }
+            ctx.strokeStyle = l === 0 ? '#f4b400' : (l === 1 ? '#ffcc66' : '#ffd966');
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+        requestAnimationFrame(drawChart);
+    }
+    drawChart();
+</script>
+
+</body>
+</html>
