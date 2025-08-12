@@ -180,6 +180,42 @@
     .next-btn {
         right: -20px;
     }
+    .experience-item {
+    margin-bottom: 2rem;
+}
+
+.company {
+    color: var(--secondary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    float: right;
+    color: var(--highlight);
+    font-weight: bold;
+}
+
+.experience-item ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.experience-item ul li {
+    position: relative;
+    margin-bottom: 0.6rem;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.experience-item ul li::before {
+    content: "●";
+    color: var(--highlight);
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+    top: 0.4rem;
+}
     footer {
         background-color: var(--primary);
         color: white;
@@ -312,42 +348,44 @@ if (window.location.hostname.includes("github.io")) {
 </section>
 
     <!-- Experience -->
-    <section>
-        <h2>Experience</h2>
-        <h3>Analyst – Mergers & Acquisitions | AKMV Consultants Pvt Ltd</h3>
-        <p>A consultancy firm specializing in M&A and financial advisory<br>
-• Executed transactions across multiple sectors: BPC company with revenue under
-₹1 Cr, a travel services company valued between ₹1 Cr and ₹10 Cr, an Agritech drone company valued at ₹10 Cr, and two facilities management
-companies valued at ₹10 Cr and ₹80 Cr<br>
-• Structured capital raises and valuations using DCF analysis, trading
-comparables, and precedent transactions to support negotiations with investors
-and strategic partners<br>
-• Designed a standardized DCF valuation template adopted companywide,
-improving efficiency and consistency in financial modelling<br>
-• Developed sector-specific investor presentations aligned with market trends
-and investor interests to improve pitch effectiveness<br>
-• Conducted in-depth industry and competitive research to identify value drivers
-and strengthen investment theses in Southeast Asian Market for an International
-Investor<br>
-• Acted as primary liaison between clients, investors, and internal teams to
-ensure seamless deal execution<br>
-• Trained and mentored interns on financial modelling, industry research, and
-investor mapping to enhance team capability</p>
-        <h3>Financial Analyst – TMT Industry | Professional Mantra Pvt Ltd</h3>
-        <p>A US based hedge fund focused on the TMT sector<br>
-• Developed and enhanced financial models to assess target companies and
-improve forecasting accuracy<br>
-• Analysed corporate and industry calls, delivering actionable insights for
-investment decisions<br>
-• Managed data metric spreadsheets for U.S.-based hedge fund investment targets<br>
-• Produced in-depth market research reports on Pharmaceuticals, SaaS, and TMT
-sectors<br>
-• Monitored macroeconomic trends to assess portfolio impact<br>
-• Trained interns in financial modelling, note-taking, and presentation development</p>
-        <h3>Financial Analyst Intern | MedTourEasy</h3>
-        <p>Built operating and financial models for target companies in medical tourism.</p>
-    </section>
+<section>
+    <h2>Experience</h2>
 
+    <div class="experience-item">
+        <h3>Analyst – Mergers & Acquisitions</h3>
+        <p class="company">AKMV Consultants Pvt Ltd | New Delhi, India <span class="date">Sep 2022 – Present</span></p>
+        <ul>
+            <li>Executed transactions across sectors: BPC company (revenue under ₹1 Cr), travel services company (₹1–₹10 Cr), agritech drone company (₹10 Cr), and two facilities management companies (₹10 Cr and ₹80 Cr).</li>
+            <li>Structured capital raises and valuations using DCF analysis, trading comparables, and precedent transactions.</li>
+            <li>Designed a standardized DCF valuation template adopted companywide, improving modelling efficiency.</li>
+            <li>Developed sector-specific investor presentations aligned with market trends to improve pitch effectiveness.</li>
+            <li>Conducted industry and competitive research to identify value drivers in the Southeast Asian market for an international investor.</li>
+            <li>Acted as primary liaison between clients, investors, and internal teams to ensure seamless deal execution.</li>
+            <li>Trained and mentored interns on financial modelling, industry research, and investor mapping.</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Financial Analyst – TMT Industry</h3>
+        <p class="company">Professional Mantra Pvt Ltd | Remote (U.S.-based) <span class="date">Jan 2022 – Aug 2022</span></p>
+        <ul>
+            <li>Developed and enhanced financial models to assess target companies and improve forecasting accuracy.</li>
+            <li>Analysed corporate and industry calls, delivering actionable investment insights.</li>
+            <li>Managed data metric spreadsheets for U.S.-based hedge fund investment targets.</li>
+            <li>Produced in-depth market research reports on Pharmaceuticals, SaaS, and TMT sectors.</li>
+            <li>Monitored macroeconomic trends to assess portfolio impact.</li>
+            <li>Trained interns in financial modelling, note-taking, and presentation development.</li>
+        </ul>
+    </div>
+
+    <div class="experience-item">
+        <h3>Financial Analyst Intern</h3>
+        <p class="company">MedTourEasy | New Delhi, India <span class="date">Jun 2021 – Dec 2021</span></p>
+        <ul>
+            <li>Built operating and financial models for target companies in medical tourism.</li>
+        </ul>
+    </div>
+</section>
     <!-- Contact -->
     <section>
         <h2>Contact</h2>
@@ -457,6 +495,7 @@ sectors<br>
 
 </body>
 </html>
+
 
 
 
