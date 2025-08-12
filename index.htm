@@ -216,6 +216,55 @@
     font-size: 0.8rem;
     top: 0.4rem;
 }
+    /* Icons */
+.icon i {
+    color: var(--highlight);
+    margin-right: 6px;
+    font-size: 1rem;
+}
+
+/* Scrollable container */
+.experience-scroll {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+}
+.experience-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+.experience-scroll::-webkit-scrollbar-thumb {
+    background-color: var(--highlight);
+    border-radius: 4px;
+}
+
+/* Experience cards */
+.experience-card {
+    flex: 0 0 320px;
+    background: var(--card-bg);
+    border-top: 4px solid var(--highlight);
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.experience-card h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+.experience-card ul {
+    padding-left: 18px;
+    font-size: 0.95rem;
+}
+.experience-card li {
+    margin-bottom: 0.4rem;
+}
+.company {
+    font-weight: bold;
+    color: var(--secondary);
+    margin-bottom: 0.8rem;
+}
+
     footer {
         background-color: var(--primary);
         color: white;
@@ -235,7 +284,6 @@
         opacity: 0.15;
         pointer-events: none;
     }
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css">
 </style>
 </head>
 <body>
@@ -352,54 +400,58 @@ if (window.location.hostname.includes("github.io")) {
    <!-- Experience -->
 <section>
     <h2>Experience</h2>
-    <div class="experience-container">
+    <div class="experience-scroll">
         
-        <div class="experience-item">
+        <!-- Job 1 -->
+        <div class="experience-card">
             <h3>Analyst – Mergers & Acquisitions</h3>
             <p class="company">
-                <span class="icon">📍</span> AKMV Consultants Pvt Ltd | New Delhi, India
+                <span class="icon"><i class="fas fa-location-dot"></i></span> New Delhi, India
                 <br>
-                <span class="icon">📅</span> Sep 2022 – Present
+                <span class="icon"><i class="fas fa-calendar-alt"></i></span> Sep 2022 – Present
             </p>
             <ul>
-                <li>Executed transactions across sectors: BPC company (₹<1 Cr), travel services (₹1–₹10 Cr), agritech drone (₹10 Cr), and facilities management companies (₹10 Cr & ₹80 Cr).</li>
+                <li>Executed transactions across sectors: BPC company, travel services, agritech drone, and facilities management.</li>
                 <li>Structured capital raises and valuations using DCF, trading comps, and precedent transactions.</li>
-                <li>Designed a standardized DCF valuation template adopted companywide, improving modelling efficiency.</li>
-                <li>Developed sector-specific investor presentations aligned with market trends to improve pitch effectiveness.</li>
-                <li>Conducted industry & competitive research for Southeast Asian market entry strategy.</li>
-                <li>Acted as primary liaison between clients, investors, and internal teams for seamless deal execution.</li>
-                <li>Trained & mentored interns on financial modelling, industry research, and investor mapping.</li>
+                <li>Designed standardized DCF template adopted companywide.</li>
+                <li>Developed sector-specific investor presentations.</li>
+                <li>Conducted industry & competitive research for Southeast Asian markets.</li>
+                <li>Acted as liaison between clients, investors, and teams.</li>
+                <li>Trained and mentored interns.</li>
             </ul>
         </div>
 
-        <div class="experience-item">
+        <!-- Job 2 -->
+        <div class="experience-card">
             <h3>Financial Analyst – TMT Industry</h3>
             <p class="company">
-                <span class="icon">📍</span> Professional Mantra Pvt Ltd | Remote (U.S.-based)
+                <span class="icon"><i class="fas fa-location-dot"></i></span> Remote (U.S.-based)
                 <br>
-                <span class="icon">📅</span> Jan 2022 – Aug 2022
+                <span class="icon"><i class="fas fa-calendar-alt"></i></span> Jan 2022 – Aug 2022
             </p>
             <ul>
-                <li>Developed & enhanced financial models to assess target companies and improve forecasting accuracy.</li>
-                <li>Analysed corporate & industry calls, delivering actionable investment insights.</li>
-                <li>Managed data metric spreadsheets for U.S. hedge fund investment targets.</li>
-                <li>Produced market research reports on Pharmaceuticals, SaaS, and TMT sectors.</li>
+                <li>Developed and enhanced financial models for target companies.</li>
+                <li>Analyzed corporate and industry calls, delivering actionable insights.</li>
+                <li>Managed data metric spreadsheets for hedge fund targets.</li>
+                <li>Produced market research reports on Pharma, SaaS, and TMT sectors.</li>
                 <li>Monitored macroeconomic trends to assess portfolio impact.</li>
-                <li>Trained interns in financial modelling, note-taking, and presentation development.</li>
+                <li>Trained interns in financial modelling and presentations.</li>
             </ul>
         </div>
 
-        <div class="experience-item">
+        <!-- Job 3 -->
+        <div class="experience-card">
             <h3>Financial Analyst Intern</h3>
             <p class="company">
-                <span class="icon"><i class="fi fi-bs-marker"></i></span> MedTourEasy | New Delhi, India
+                <span class="icon"><i class="fas fa-location-dot"></i></span> New Delhi, India
                 <br>
-                <span class="icon">📅</span> Jun 2021 – Dec 2021
+                <span class="icon"><i class="fas fa-calendar-alt"></i></span> Jun 2021 – Dec 2021
             </p>
             <ul>
-                <li>Built operating & financial models for target companies in medical tourism.</li>
+                <li>Built operating and financial models for target companies in medical tourism.</li>
             </ul>
         </div>
+
     </div>
 </section>
     <!-- Contact -->
@@ -511,6 +563,7 @@ if (window.location.hostname.includes("github.io")) {
 
 </body>
 </html>
+
 
 
 
