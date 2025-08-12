@@ -216,37 +216,42 @@
     font-size: 0.8rem;
     top: 0.4rem;
 }
-    /* Icons */
+  /* Icons */
 .icon i {
     color: var(--highlight);
     margin-right: 6px;
     font-size: 1rem;
 }
 
-/* Scrollable container */
-.experience-scroll {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    padding-bottom: 1rem;
-    scroll-behavior: smooth;
+/* Vertical scroll container */
+.experience-vertical {
+    max-height: 500px; /* adjust based on how much you want visible */
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--highlight) var(--bg);
 }
-.experience-scroll::-webkit-scrollbar {
-    height: 8px;
+.experience-vertical::-webkit-scrollbar {
+    width: 8px;
 }
-.experience-scroll::-webkit-scrollbar-thumb {
+.experience-vertical::-webkit-scrollbar-thumb {
     background-color: var(--highlight);
     border-radius: 4px;
 }
 
 /* Experience cards */
 .experience-card {
-    flex: 0 0 320px;
     background: var(--card-bg);
-    border-top: 4px solid var(--highlight);
-    border-radius: 10px;
+    border-left: 4px solid var(--highlight);
+    border-radius: 8px;
     padding: 1.2rem;
+    margin-bottom: 1.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.experience-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 .experience-card h3 {
     margin-top: 0;
@@ -400,7 +405,7 @@ if (window.location.hostname.includes("github.io")) {
    <!-- Experience -->
 <section>
     <h2>Experience</h2>
-    <div class="experience-scroll">
+    <div class="experience-vertical">
         
         <!-- Job 1 -->
         <div class="experience-card">
@@ -408,7 +413,7 @@ if (window.location.hostname.includes("github.io")) {
             <p class="company">
                 <span class="icon"><i class="fas fa-location-dot"></i></span> New Delhi, India
                 <br>
-                <span class="icon"><i class="fas fa-calendar-alt"></i></span> Sep 2022 – Present
+                <span class="icon"><i class="fas fa-calendar-alt"></i></span> March 2025 – Present
             </p>
             <ul>
                 <li>Executed transactions across sectors: BPC company, travel services, agritech drone, and facilities management.</li>
@@ -427,7 +432,7 @@ if (window.location.hostname.includes("github.io")) {
             <p class="company">
                 <span class="icon"><i class="fas fa-location-dot"></i></span> Remote (U.S.-based)
                 <br>
-                <span class="icon"><i class="fas fa-calendar-alt"></i></span> Jan 2022 – Aug 2022
+                <span class="icon"><i class="fas fa-calendar-alt"></i></span> Jan 2023 – Feb 2025
             </p>
             <ul>
                 <li>Developed and enhanced financial models for target companies.</li>
@@ -445,7 +450,7 @@ if (window.location.hostname.includes("github.io")) {
             <p class="company">
                 <span class="icon"><i class="fas fa-location-dot"></i></span> New Delhi, India
                 <br>
-                <span class="icon"><i class="fas fa-calendar-alt"></i></span> Jun 2021 – Dec 2021
+                <span class="icon"><i class="fas fa-calendar-alt"></i></span> Nov 2022 – Dec 2022
             </p>
             <ul>
                 <li>Built operating and financial models for target companies in medical tourism.</li>
@@ -454,6 +459,7 @@ if (window.location.hostname.includes("github.io")) {
 
     </div>
 </section>
+
     <!-- Contact -->
     <section>
         <h2>Contact</h2>
@@ -563,6 +569,7 @@ if (window.location.hostname.includes("github.io")) {
 
 </body>
 </html>
+
 
 
 
